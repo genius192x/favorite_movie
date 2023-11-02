@@ -46,8 +46,10 @@ const movieStore = useMovieStore();
 const moviesInLocalStorage = localStorage.getItem("movies");
 if (moviesInLocalStorage) {
 	console.log(movieStore.movies);
+	movieStore.activeTab = 1
 	movieStore.movies = JSON.parse(moviesInLocalStorage);
 }
+
 watch(
     () => movieStore.movies,
     (state) => {

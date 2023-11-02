@@ -58,11 +58,7 @@ const props = defineProps({
   padding: 10px;
   border-radius: 10px;
 }
-@media (max-width: 768px){
-	.movie {
-		flex-wrap: wrap;
-	}
-}
+
 .movie-accept {
   margin-right: 10px;
 }
@@ -76,7 +72,23 @@ const props = defineProps({
   object-fit: cover;
   border-radius: 50%;
 }
-
+@media (max-width: 768px){
+	/* .movie {
+		flex-direction: column;
+		flex-wrap: wrap;
+	} */
+	.movie-img {
+		width: 100px;
+		height: 100px;
+		object-fit: cover;
+		border-radius: 50%;
+		
+	}
+	.movie-overview {
+		-webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+	}
+}
 .movie__name {
   display: flex;
   align-items: center;
